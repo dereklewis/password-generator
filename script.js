@@ -10,22 +10,39 @@ var generateBtn = document.querySelector("#generate");
 // }
 
 
-
+//working code
 function generatePassword () {
   var passwordLength = prompt("Enter password length between 8 and 128 characters")
   if (passwordLength < 8 || passwordLength > 128) {
     alert("Please enter a valid length")
     
   }
+
   else {
-    var lowerCase = confirm("Would you like to include lower case characters?")
+    var lowerCase = confirm("Would you like to include lowercase characters in your password?")
     console.log(lowerCase)
   }
- 
+      var upperCase = confirm("Would you like to include uppercase characters in your password?");
+      console.log(upperCase)
+      var specialCharacters = confirm("Would you like to include special characters in your password?");
+      console.log(specialCharacters)
+      var numbers = confirm("Would you like to include numbers in your password?");
+      console.log(numbers)
+
+  if (lowerCase === false && upperCase === false && specialCharacters === false && numbers === false) {
+    alert("Please choose at least one character type")
+    
+}
+else {
+  alert("Thank You!")
+}
 
 
   return "hello"
 }
+
+
+  
 
 
 // Write password to the #password input
